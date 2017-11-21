@@ -1,16 +1,21 @@
 <template>
   <div id="app">
     <img src="./assets/favicon.png">
+    <address-bar></address-bar>
   </div>
 </template>
 
 <script>
+import AddressBar from './components/AddressBar.vue'
 export default {
   name: 'app',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  components: {
+    AddressBar: AddressBar
   }
 }
 </script>
