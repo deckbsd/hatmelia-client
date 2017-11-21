@@ -7,7 +7,6 @@
 
 <script>
 import AddressBar from './components/AddressBar.vue'
-
 export default {
   name: 'app',
   data () {
