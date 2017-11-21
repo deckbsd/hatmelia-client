@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import AddressBar from './components/AddressBar.vue'
+import AddressBar from './components/input/AddressBar.vue'
 export default {
   name: 'app',
   data () {
