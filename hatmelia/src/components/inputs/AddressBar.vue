@@ -2,7 +2,7 @@
     <div class="center">
         <span>Website address : </span>
         <input style="width: 250px;" type="textbox" v-model="url" />
-        <input type="button" value="Check" @click="SendRequest()"/>
+        <input type="button" value="Check" @click="sendRequest()"/>
     </div>
 </template>
 
@@ -14,14 +14,15 @@ export default {
     }
   },
   methods: {
-    SendRequest: function() {
+    sendRequest: function() {
       if (!this.url) {
         return
       }
 
-      this.$socket.emit("check-for-dead", this.SanityzeUrl())
+      this.$socket.emit("check-for-dead", this.sanityzeUrl())
+      this.$emit('start', true)
     },
-    SanityzeUrl: function() {
+    sanityzeUrl: function() {
       let curl = ""
 
       if (this.url.startsWith("http") === false) {

@@ -1,28 +1,23 @@
 <template>
   <div id="app">
     <img src="./assets/favicon.png">
-    <address-bar></address-bar>
+    <home-page></home-page>
   </div>
 </template>
 
 <script>
-import AddressBar from './components/inputs/AddressBar.vue'
+import HomePage from "./pages/Home.vue"
 export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  },
+  name: "app",
   components: {
-    AddressBar: AddressBar
+    HomePage: HomePage
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -30,7 +25,8 @@ export default {
   margin-top: 60px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 
@@ -46,5 +42,18 @@ li {
 
 a {
   color: #42b983;
+}
+
+.center {
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+  text-align: center;
+}
+.right {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: right;
 }
 </style>
