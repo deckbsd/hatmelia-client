@@ -33,9 +33,9 @@ export default {
   },
   methods: {
       start: function (started) {
-          this.$store.commit('REQUEST_RUNNING', started)
           if(this.$store.state.requestRunning === false) {
-              this.Links = []
+            this.$store.commit('REQUEST_RUNNING', started)
+            this.Links = []
             this.TotalLinkChecked = this.TimeElapsed = 0
           }
       }
