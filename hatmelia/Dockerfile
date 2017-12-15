@@ -3,8 +3,8 @@
 #
 FROM nginx
 
-ARG server="http://localhost:3000/links-analyzer"
-ENV HATMELIA_SERVER=$server
+#ARG server=http://localhost:3000/links-analyzer
+#ENV HATMELIA_SERVER=$server
 
 WORKDIR /usr/share/nginx/html
 
