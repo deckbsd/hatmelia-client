@@ -3,6 +3,7 @@ import VueSocketio from 'vue-socket.io'
 import App from './App.vue'
 import Vuex from 'vuex'
 import store from './store'
+require ('status-indicator/styles.css')
 const hatmelia_server = process.env.HATMELIA_SERVER || 'http://localhost:3000/links-analyzer'
 
 Vue.use(Vuex)

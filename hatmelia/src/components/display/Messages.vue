@@ -1,5 +1,5 @@
 <template>
-    <div class="center alert" v-if="Display">
+    <div class="center error" v-if="Display">
         <span> {{ Message }}</span>
     </div>
 </template>
@@ -22,7 +22,7 @@ export default {
     Message: function(value) {
       setTimeout(() => {
         this.Display = false
-      }, 2000)
+      }, 5000)
 
       this.Display = true
     }

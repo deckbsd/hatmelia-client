@@ -3,11 +3,16 @@
         <span>Website address : </span>
         <input style="width: 250px;" type="textbox" v-model="Url" />
         <input type="button" value="Check" @click="sendRequest()" :disabled="CheckButtonDisabled"/>
+        <connection-status style="margin: 5px;"></connection-status>
     </div>
 </template>
 
 <script>
+import ConnectionStatus from '../display/ConnectionStatus.vue'
 export default {
+  components: {
+    ConnectionStatus: ConnectionStatus
+  },
   data() {
     return {
       Url: null,

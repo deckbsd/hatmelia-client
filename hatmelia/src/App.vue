@@ -56,4 +56,9 @@ a {
   padding: 10px;
   text-align: right;
 }
+
+.error {
+  color: red;
+  font-weight: bold;
+}
 </style>
