@@ -20,11 +20,11 @@ export default {
   },
   watch: {
     Message: function(value) {
-        setTimeout(() => {
-            this.Display = false
-        }, 2000)
+      setTimeout(() => {
+        this.Display = false
+      }, 2000)
 
-        this.Display = true
+      this.Display = true
     }
   }
 }
