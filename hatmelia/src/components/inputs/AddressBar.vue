@@ -21,15 +21,15 @@ export default {
       }
 
       if (this.$store.state.requestRunning === false) {
-        this.$socket.emit("check-for-dead", this.sanityzeUrl())
+        this.$socket.emit('check-for-dead', this.sanityzeUrl())
         this.$emit('start', true)
       }
     },
     sanityzeUrl: function() {
-      let curl = ""
+      let curl = ''
 
-      if (this.Url.startsWith("http") === false) {
-           curl = "http://" + this.Url
+      if (this.Url.startsWith('http') === false) {
+           curl = 'http://' + this.Url
       }
       else {
           curl = this.Url

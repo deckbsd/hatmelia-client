@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import csvService from "../../services/csvService"
+import csvService from '../../services/csvService'
 export default {
   props: {
     Links: {
@@ -46,15 +46,15 @@ export default {
     return {
       Rows: [
         {
-          title: "Page(s)",
+          title: 'Page(s)',
           name: 'from'
         },
         {
-          title: "Dead link(s)",
+          title: 'Dead link(s)',
           name: 'url'
         },
         {
-          title: "Reason(s)",
+          title: 'Reason(s)',
           name: 'reason'
         }
       ]
@@ -68,7 +68,7 @@ export default {
       csvService.exportDataTableToCsv(
         this.Rows,
         this.Links,
-        "deadlinks-results.csv"
+        'deadlinks-results.csv'
       )
     }
   }

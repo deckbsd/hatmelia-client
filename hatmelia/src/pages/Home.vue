@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import AddressBar from "../components/inputs/AddressBar.vue"
-import LinksTable from "../components/display/HtmlDeadLinksTable.vue"
-import Total from "../components/display/Statistics.vue"
-import Loading from "../components/display/Loading.vue"
-import Messages from "../components/display/Messages.vue"
+import AddressBar from '../components/inputs/AddressBar.vue'
+import LinksTable from '../components/display/HtmlDeadLinksTable.vue'
+import Total from '../components/display/Statistics.vue'
+import Loading from '../components/display/Loading.vue'
+import Messages from '../components/display/Messages.vue'
 export default {
   components: {
     AddressBar: AddressBar,
@@ -28,7 +28,7 @@ export default {
       TotalLinkChecked: 0,
       TimeElapsed: 0,
       Loading: false,
-      Message: ""
+      Message: ''
     }
   },
   methods: {
@@ -46,12 +46,12 @@ export default {
       this.Loading = true
     },
     requestStarted: function() {
-      this.$store.commit("REQUEST_RUNNING", true)
+      this.$store.commit('REQUEST_RUNNING', true)
     },
     requestFinished: function(time) {
       this.TimeElapsed = time
       this.Loading = false
-      this.$store.commit("REQUEST_RUNNING", false)
+      this.$store.commit('REQUEST_RUNNING', false)
     },
     serverError: function(error) {
       this.Message = error
