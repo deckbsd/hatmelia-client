@@ -1,6 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
 var prodEnv = require('./config/prod.env')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: './src/main.js',
@@ -60,10 +61,13 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.DefinePlugin({
       'process.env': prodEnv
     }),
-    new webpack.optimize.UglifyJsPlugin({
+    new UglifyJsPlugin({
       sourceMap: true,
-      compress: {
-        warnings: false
+      uglifyOptions: {
+        ecma:8,  
+        compress: {
+          warnings: false
+        }
       }
     }),
     new webpack.LoaderOptionsPlugin({
